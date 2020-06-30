@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  original_wiget_exchange_hanwe
+
+  Created by hanwe on 2018. 12. 11..
+  Copyright © 2018년 hanwe. All rights reserved.
+*/
+
+"PREFERENCE_ITEM_CONTENTS" = "ตั้งค่าต่าง ๆ";
+"EXIT_ITEM_CONTENTS" = "การเลิก";
+"REMOVE_BTN_CONTENTS" = "การตัดออก";
+"ADD_TEXT_LABEL_CONTENTS" = "เพิ่ม";
+"ADD_BTN_TEXT_CONTENTS" = "เพิ่ม";
+
+"WELCOME_USER_NOTI_TITLE" = "ยินดีต้อนรับ";
+"WELCOME_USER_NOTI_CONTENTS" = "DefaultLanguage เปิดใช้งาน";
+
+"AUTO_RUNNING_OPTION_TITLE" = "เล่นอัตโนมัติเมื่อบู๊ต";
+"WELCOM_MSG_OPTION_TITLE" = "ข้อความต้อนรับ";
+"OPTION_CHECK_BOX_TITLE" = "ใช้";

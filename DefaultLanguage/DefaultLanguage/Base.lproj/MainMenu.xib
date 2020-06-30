@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
+            <connections>
+                <outlet property="_aboutItem" destination="GYI-12-OrH" id="i4O-2w-9ge"/>
+                <outlet property="_exitItem" destination="L6A-s8-XYs" id="cgL-ka-FM8"/>
+                <outlet property="_preferenceItem" destination="fJY-Kr-9u9" id="t4p-xd-TT6"/>
+                <outlet property="_trayMenu" destination="bzK-9U-kPp" id="uOg-TB-aPa"/>
+                <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <window title="DefaultLanguage" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
+            <windowStyleMask key="styleMask" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="335" y="390" width="480" height="360"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </view>
+            <point key="canvasLocation" x="134" y="466"/>
+        </window>
+        <menu id="bzK-9U-kPp">
+            <items>
+                <menuItem title="About" id="GYI-12-OrH" userLabel="About">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="clickAboutItem:" target="Voe-Tx-rLC" id="41f-Oe-Law"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="TEP-Nk-Kez"/>
+                <menuItem title="Item" id="fJY-Kr-9u9" userLabel="Preference">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="clickPreferenceAction:" target="Voe-Tx-rLC" id="dL7-8H-pjC"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="nkD-hZ-pgM"/>
+                <menuItem title="Item 3" id="L6A-s8-XYs" userLabel="Exit">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="clickExitAction:" target="Voe-Tx-rLC" id="x5j-VK-oV4"/>
+                    </connections>
+                </menuItem>
+            </items>
+        </menu>
+    </objects>
+</document>

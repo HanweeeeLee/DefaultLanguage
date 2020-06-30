@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  original_wiget_exchange_hanwe
+
+  Created by hanwe on 2018. 12. 11..
+  Copyright © 2018년 hanwe. All rights reserved.
+*/
+
+"PREFERENCE_ITEM_CONTENTS" = "설정";
+"EXIT_ITEM_CONTENTS" = "종료";
+"REMOVE_BTN_CONTENTS" = "제거";
+"ADD_TEXT_LABEL_CONTENTS" = "추가하기";
+"ADD_BTN_TEXT_CONTENTS" = "추가";
+
+"WELCOME_USER_NOTI_TITLE" = "환영합니다.";
+"WELCOME_USER_NOTI_CONTENTS" = "DefaultLanguage가 실행되었습니다.";
+
+"AUTO_RUNNING_OPTION_TITLE" = "부팅시 자동실행";
+"WELCOM_MSG_OPTION_TITLE" = "환영메시지";
+"OPTION_CHECK_BOX_TITLE" = "사용";

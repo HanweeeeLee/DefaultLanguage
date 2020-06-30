@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  original_wiget_exchange_hanwe
+
+  Created by hanwe on 2018. 12. 11..
+  Copyright © 2018년 hanwe. All rights reserved.
+*/
+
+"PREFERENCE_ITEM_CONTENTS" = "Настройки";
+"EXIT_ITEM_CONTENTS" = "Выход";
+"REMOVE_BTN_CONTENTS" = "Удалить";
+"ADD_TEXT_LABEL_CONTENTS" = "Добавить";
+"ADD_BTN_TEXT_CONTENTS" = "Добавить";
+
+"WELCOME_USER_NOTI_TITLE" = "желанный";
+"WELCOME_USER_NOTI_CONTENTS" = "DefaultLanguage включен.";
+
+"AUTO_RUNNING_OPTION_TITLE" = "Автозапуск при загрузке";
+"WELCOM_MSG_OPTION_TITLE" = "приветственное сообщение";
+"OPTION_CHECK_BOX_TITLE" = "использование";

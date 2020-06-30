@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  original_wiget_exchange_hanwe
+
+  Created by hanwe on 2018. 12. 11..
+  Copyright © 2018년 hanwe. All rights reserved.
+*/
+
+"PREFERENCE_ITEM_CONTENTS" = "miljö";
+"EXIT_ITEM_CONTENTS" = "Uppsägning";
+"REMOVE_BTN_CONTENTS" = "Ta bort";
+"ADD_TEXT_LABEL_CONTENTS" = "Tillägga";
+"ADD_BTN_TEXT_CONTENTS" = "Ytterligare";
+
+"WELCOME_USER_NOTI_TITLE" = "Välkommen";
+"WELCOME_USER_NOTI_CONTENTS" = "DefaultLanguage är aktiverat.";
+
+"AUTO_RUNNING_OPTION_TITLE" = "AutoPlay på Boot";
+"WELCOM_MSG_OPTION_TITLE" = "välkomstmeddelande";
+"OPTION_CHECK_BOX_TITLE" = "Använda sig av";

@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  original_wiget_exchange_hanwe
+
+  Created by hanwe on 2018. 12. 11..
+  Copyright © 2018년 hanwe. All rights reserved.
+*/
+
+"PREFERENCE_ITEM_CONTENTS" = "sự thiết lập";
+"EXIT_ITEM_CONTENTS" = "Kết thúc";
+"REMOVE_BTN_CONTENTS" = "loại bỏ";
+"ADD_TEXT_LABEL_CONTENTS" = "Thêm vào";
+"ADD_BTN_TEXT_CONTENTS" = "sự bổ sung";
+
+"WELCOME_USER_NOTI_TITLE" = "Chào mừng bạn";
+"WELCOME_USER_NOTI_CONTENTS" = "Ngôn ngữ mặc định được bật.";
+
+"AUTO_RUNNING_OPTION_TITLE" = "Tự động phát khi khởi động";
+"WELCOM_MSG_OPTION_TITLE" = "tin nhắn chào mừng";
+"OPTION_CHECK_BOX_TITLE" = "Sử dụng";

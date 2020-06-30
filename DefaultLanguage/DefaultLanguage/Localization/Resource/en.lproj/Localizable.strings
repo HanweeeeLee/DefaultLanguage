@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  original_wiget_exchange_hanwe
+
+  Created by hanwe on 2018. 12. 11..
+  Copyright © 2018년 hanwe. All rights reserved.
+*/
+
+"PREFERENCE_ITEM_CONTENTS" = "Setting";
+"EXIT_ITEM_CONTENTS" = "Quit";
+"REMOVE_BTN_CONTENTS" = "Remove";
+"ADD_TEXT_LABEL_CONTENTS" = "To add";
+"ADD_BTN_TEXT_CONTENTS" = "Additional";
+
+"WELCOME_USER_NOTI_TITLE" = "Welcome";
+"WELCOME_USER_NOTI_CONTENTS" = "DefaultLanguage is enabled.";
+
+"AUTO_RUNNING_OPTION_TITLE" = "AutoPlay on Boot";
+"WELCOM_MSG_OPTION_TITLE" = "Welcome Message";
+"OPTION_CHECK_BOX_TITLE" = "Use";
