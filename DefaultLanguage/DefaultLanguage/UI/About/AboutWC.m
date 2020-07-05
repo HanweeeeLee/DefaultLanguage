@@ -33,7 +33,7 @@
 
 -(void)initUI
 {
-    [_imgView setImage:[NSImage imageNamed:@"batch_64iconmonstr-cat-5-240 (1)"]];
+    [_imgView setImage:[NSImage imageNamed:@"icon_128x128"]];
     [_versionLabel setStringValue:[NSString stringWithFormat:@"Version : %@",[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]]];
     [self.window setLevel:NSTornOffMenuWindowLevel];
 }
