@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16097" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="AboutWC">
             <connections>
                 <outlet property="_appNameLabel" destination="Zos-9U-8gi" id="4KV-54-0od"/>
+                <outlet property="_copyrightLabel" destination="y7k-RK-Hg9" id="xqC-dK-Mqb"/>
                 <outlet property="_imgView" destination="fbT-V7-LSf" id="puk-fL-N6T"/>
                 <outlet property="_versionLabel" destination="WTT-On-kfh" id="rbl-0A-6Ot"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
@@ -26,55 +27,84 @@
             <value key="minFullScreenContentSize" type="size" width="400" height="120"/>
             <value key="maxFullScreenContentSize" type="size" width="400" height="120"/>
             <view key="contentView" wantsLayer="YES" id="se5-gp-TjO">
-                <rect key="frame" x="0.0" y="0.0" width="400" height="120"/>
+                <rect key="frame" x="0.0" y="0.0" width="400" height="99"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zos-9U-8gi">
-                        <rect key="frame" x="90" y="90" width="263" height="20"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Default Language" id="Snp-rL-BDb">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WTT-On-kfh">
-                        <rect key="frame" x="90" y="64" width="263" height="20"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Version_label" id="Wjh-eY-p64">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2JH-Nv-XvY">
-                        <rect key="frame" x="90" y="38" width="272" height="20"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="E-Mail : lhanm@naver.com (LHANM)" id="anR-hI-Mwu">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y7k-RK-Hg9">
-                        <rect key="frame" x="90" y="10" width="275" height="20"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Copyright 2019 hanwe lee All rights reserved" id="ypq-3b-sgG">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fbT-V7-LSf">
-                        <rect key="frame" x="12" y="30" width="60" height="60"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fbT-V7-LSf">
+                        <rect key="frame" x="12" y="20" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="N3p-FQ-8WJ"/>
+                            <constraint firstAttribute="width" constant="60" id="lLa-aH-SaG"/>
+                        </constraints>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="s30-k3-Yrd"/>
                     </imageView>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="v7P-U2-kHX">
+                        <rect key="frame" x="82" y="0.0" width="318" height="99"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Zos-9U-8gi">
+                                <rect key="frame" x="18" y="73" width="302" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Default Language" id="Snp-rL-BDb">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WTT-On-kfh">
+                                <rect key="frame" x="18" y="52" width="302" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Version_label" id="Wjh-eY-p64">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="y7k-RK-Hg9">
+                                <rect key="frame" x="18" y="10" width="302" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Copyright 2019 hanwe lee All rights reserved" id="ypq-3b-sgG">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2JH-Nv-XvY">
+                                <rect key="frame" x="18" y="31" width="302" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="E-Mail : mobiledev@kakao.com" id="anR-hI-Mwu">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="2JH-Nv-XvY" firstAttribute="top" secondItem="WTT-On-kfh" secondAttribute="bottom" constant="5" id="2D0-Wz-8ZG"/>
+                            <constraint firstItem="y7k-RK-Hg9" firstAttribute="leading" secondItem="Zos-9U-8gi" secondAttribute="leading" id="2YY-6s-lmS"/>
+                            <constraint firstItem="WTT-On-kfh" firstAttribute="top" secondItem="Zos-9U-8gi" secondAttribute="bottom" constant="5" id="6I1-fu-alJ"/>
+                            <constraint firstItem="y7k-RK-Hg9" firstAttribute="leading" secondItem="v7P-U2-kHX" secondAttribute="leading" constant="20" symbolic="YES" id="7dt-us-nb8"/>
+                            <constraint firstAttribute="trailing" secondItem="Zos-9U-8gi" secondAttribute="trailing" id="LyC-hZ-YEK"/>
+                            <constraint firstItem="y7k-RK-Hg9" firstAttribute="top" secondItem="2JH-Nv-XvY" secondAttribute="bottom" constant="5" id="Qdx-OZ-DNG"/>
+                            <constraint firstItem="2JH-Nv-XvY" firstAttribute="trailing" secondItem="WTT-On-kfh" secondAttribute="trailing" id="YDX-Fd-OES"/>
+                            <constraint firstItem="Zos-9U-8gi" firstAttribute="leading" secondItem="v7P-U2-kHX" secondAttribute="leading" constant="20" id="Z7O-cJ-mGW"/>
+                            <constraint firstItem="2JH-Nv-XvY" firstAttribute="leading" secondItem="WTT-On-kfh" secondAttribute="leading" id="Z8e-mt-ekZ"/>
+                            <constraint firstItem="y7k-RK-Hg9" firstAttribute="trailing" secondItem="Zos-9U-8gi" secondAttribute="trailing" id="cjT-2e-S3B"/>
+                            <constraint firstItem="WTT-On-kfh" firstAttribute="trailing" secondItem="Zos-9U-8gi" secondAttribute="trailing" id="dPU-FR-h2Y"/>
+                            <constraint firstItem="WTT-On-kfh" firstAttribute="leading" secondItem="Zos-9U-8gi" secondAttribute="leading" id="eqc-Qv-3B0"/>
+                            <constraint firstAttribute="bottom" secondItem="y7k-RK-Hg9" secondAttribute="bottom" constant="10" id="fP0-a5-veg"/>
+                            <constraint firstItem="Zos-9U-8gi" firstAttribute="top" secondItem="v7P-U2-kHX" secondAttribute="top" constant="10" id="mBz-o1-OAM"/>
+                        </constraints>
+                    </customView>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="v7P-U2-kHX" secondAttribute="bottom" id="Exj-od-4wt"/>
+                    <constraint firstItem="fbT-V7-LSf" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="12" id="Jah-DA-hN8"/>
+                    <constraint firstAttribute="trailing" secondItem="v7P-U2-kHX" secondAttribute="trailing" id="Qx4-wj-Leh"/>
+                    <constraint firstItem="v7P-U2-kHX" firstAttribute="leading" secondItem="fbT-V7-LSf" secondAttribute="trailing" constant="10" id="VZi-2t-RsZ"/>
+                    <constraint firstItem="v7P-U2-kHX" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" id="fqg-O6-J9M"/>
+                    <constraint firstItem="fbT-V7-LSf" firstAttribute="centerY" secondItem="se5-gp-TjO" secondAttribute="centerY" id="uYf-tz-rW8"/>
+                </constraints>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
+            <point key="canvasLocation" x="139" y="147"/>
         </window>
     </objects>
 </document>

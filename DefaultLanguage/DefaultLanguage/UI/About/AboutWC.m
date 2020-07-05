@@ -36,5 +36,9 @@
     [_imgView setImage:[NSImage imageNamed:@"icon_128x128"]];
     [_versionLabel setStringValue:[NSString stringWithFormat:@"Version : %@",[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]]];
     [self.window setLevel:NSTornOffMenuWindowLevel];
+    NSDateFormatter *today = [[NSDateFormatter alloc] init];
+    [today setDateFormat:@"yyyy"];
+    NSString *todayYear = [today stringFromDate:[NSDate date]];
+    _copyrightLabel.stringValue = [NSString stringWithFormat:@"Copyright %@ hanwe lee All rights reserved",todayYear];
 }
 @end

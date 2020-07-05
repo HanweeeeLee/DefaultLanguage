@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
     
     IBOutlet NSImageView *_imgView;
     IBOutlet NSTextField *_versionLabel;
+    __weak IBOutlet NSTextField *_copyrightLabel;
     
 }
 -(id)initWithWindowNibName:(NSNibName)windowNibName withParentsObj:(id)parentsObj;
