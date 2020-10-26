@@ -93,59 +93,30 @@
 
 -(BOOL)switchInputSource:(NSString *)sourceID
 {
-    BOOL result = YES;
-//    usleep(0.2* 1000 * 1000);
-    TISInputSourceRef source = TISCopyCurrentKeyboardInputSource();
-//    NSLog(@"이게이름인가 :%@",TISGetInputSourceProperty(source, kTISPropertyInputSourceID));
     
-    if(![sourceID isEqualToString:[NSString stringWithFormat:@"%@",TISGetInputSourceProperty(source, kTISPropertyInputSourceID)]]){
-//        NSLog(@"변경");
-        TISInputSourceRef beforeSource = source;
-        TISDeselectInputSource(source);
-        TISDisableInputSource(source);
-       
-
+    BOOL result = YES;
+    TISInputSourceRef originSource = TISCopyCurrentKeyboardInputSource();
+    NSString *currentInputSourceName = [NSString stringWithFormat:@"%@",TISGetInputSourceProperty(originSource, kTISPropertyInputSourceID)];
+    NSLog(@"현재 인풋소스 이름:%@",currentInputSourceName);
+    
+    if(![sourceID isEqualToString:currentInputSourceName]){
+        NSLog(@"변경 바뀌어야하는 :%@ 원래 :%@",sourceID,currentInputSourceName);
         CFArrayRef sourceListCFref = TISCreateInputSourceList (NULL, false);
         NSArray *sourceList = (__bridge NSArray *)sourceListCFref;
         for(int i = 0 ; i < [sourceList count] ; i++){
             TISInputSourceRef sourceForIn = CFArrayGetValueAtIndex(sourceListCFref,i);
-//                    NSLog(@"이게이름인가 :%@",TISGetInputSourceProperty(sourceForIn, kTISPropertyInputSourceID));
             NSString *currentInputSourceName = [NSString stringWithFormat:@"%@",TISGetInputSourceProperty(sourceForIn, kTISPropertyInputSourceID)];
-            if(![currentInputSourceName isEqualToString:sourceID]){
-                NSLog(@" **********currentInputSourceName: %@",currentInputSourceName);
-                NSLog(@" ************sourceID :%@",sourceID);
-                result = NO;
-            }
-            else{
-                result = YES;
-//                NSLog(@"왜딴거찍어 :%@",[NSString stringWithFormat:@"%@",TISGetInputSourceProperty(sourceForIn, kTISPropertyInputSourceID)]);
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    
-                    OSStatus status;
-
-                    TISEnableInputSource(sourceForIn);
-                    status = TISSelectInputSource(sourceForIn);
-                    TISEnableInputSource(beforeSource);
-                    
-//                     NSLog(@"이전 :%@",TISGetInputSourceProperty(source, kTISPropertyInputSourceID));
-                    if (status != noErr){
-                        NSLog(@"err");
-                    }
-//                    NSLog(@"변경시도");
-                    NSLog(@"왜딴거찍어 :%@",[NSString stringWithFormat:@"%@",TISGetInputSourceProperty(sourceForIn, kTISPropertyInputSourceID)]);
-                    TISInputSourceRef resultSource = TISCopyCurrentKeyboardInputSource();
-                    NSLog(@"결과 :%@",TISGetInputSourceProperty(resultSource, kTISPropertyInputSourceID));
-                    if(TISGetInputSourceProperty(resultSource, kTISPropertyInputSourceID) != TISGetInputSourceProperty(sourceForIn, kTISPropertyInputSourceID)){
-                        NSLog(@"여기에 들어오다니..");
-//                        usleep(0.1 * 1000 * 1000);
-                        TISEnableInputSource(sourceForIn);
-                        TISSelectInputSource(sourceForIn);
-                        TISEnableInputSource(beforeSource);
-                    }
-//                    kTISNotifyEnabledKeyboardInputSourcesChanged;
-                });
+            NSLog(@"current:%@",currentInputSourceName);
+            if([currentInputSourceName isEqualToString:sourceID]){
+                NSLog(@"변경 :%@",sourceID);
+                TISDeselectInputSource(originSource);
+                TISSelectInputSource(sourceForIn);
                 
                 break;
+            }
+            else {
+                NSLog(@" **********currentInputSourceName: %@",currentInputSourceName);
+                NSLog(@" ************sourceID :%@",sourceID);
             }
         }
     }
